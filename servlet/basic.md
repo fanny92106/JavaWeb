@@ -45,10 +45,11 @@
     - ServletContext 是一个接口，用来表示 Servlet 上下文对象
     - 一个 web 工程只有一个 ServletContext 对象实例
     - ServletContext 对象是一个域对象
+    - servletContext 是在 web 工程部署启动的时候创建，在 web 工程停止的时候销毁
 
 
 
-### 4个作用
+### servletContext 的 4个作用
     1) 获取 web.xml 中配置的上下文参数 context-param (整个工程可见，即所有 servlet 都可见)
     
         web.xml中声明 context-param
@@ -58,9 +59,27 @@
 ![servletContextGetParam](imagePool/servletContextGetParam.png)
         
         
-    2) 获取当前的工程路径，格式: /工程路径
+    2) 获取当前的工程路径，格式: /工程路径, (在config 的 deployment 中也叫 Application Context)
+    
+        context.getContextPath()
+![getContextPath](imagePool/getContextPath.png)      
+        
+        展示 工程路径
+![projectPath](imagePool/projectPath.png)    
+
+
+
     3) 获取工程部署后在服务器硬盘上的绝对路径
-    4) 像 Map 一样存取数据
+    
+        context.getRealPath("/") --> "/" 代表全限定的根路径
+![getRealPath](imagePool/getRealPath.png)    
+
+        全限定路径名
+![deploymentPath](imagePool/deploymentPath.png)    
+
+
+    4) 像 Map 一样存取数据, 存放后别的 servlet 也可以获取，真个project可见
+![servletContextSetGetAttribute](imagePool/servletContextSetGetAttribute.png)    
 
 
 
