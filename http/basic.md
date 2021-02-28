@@ -68,3 +68,48 @@
     1) form 标签 method=post
 
 
+
+## Response
+
+### 响应
+
+![httpResponse](imagePool/httpResponse.png)
+
+    - 响应行
+        1) 响应的协议和版本号  HTTP/1.1
+        2) 响应状态码        200
+        3) 响应状态描述符     ok
+        
+    - 响应头 (key-value pair)
+        Server: 表示服务器的信息
+        Content-Type: 表示响应体的数据类型 eg: text/html
+        Content-Length: 响应数据的长度
+        Date: 响应的时间 (格林时间)
+    
+        (空行)
+        
+    - 响应体  (回传给客户端的数据)
+
+
+### 响应码
+    - 200       表示请求成功
+    - 302       表示请求重定向
+    - 404       表示请求服务器已经收到了，但是你要的数据不存在 (一般是请求地址有误)
+    - 500       表示请求服务器已经收到了，但是服务器内部代码错误
+    
+    
+    
+### MIME 类型说明 ( response data type )
+    - HTTP 协议中的数据类型 (Multipurpose Internet Mail Extensions - 多功能 Internet 邮件扩充服务)
+    - 类型格式: 大类型 / 小类型， 并与某一种文件的扩展名相对应
+    - 常见 MIME 类型：
+    
+            text/html
+            text/plain
+            image/gif
+            image/jpeg
+            video/mpeg
+            application/x-gzip
+            application/x-tar
+            ...
+    
