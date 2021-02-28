@@ -1,14 +1,15 @@
 # HTTP
 
 
-### Definition: 
+## Definition: 
     - 协议: 双方或多方相互约定好，大家都需要遵守的规则，叫协议
     - Http 协议: 指客户端和服务器之间通信时，发送的数据，需要遵守的规则，叫 HTTP 协议
     - Http 协议中的数据又叫 报文
     - 请求: 客户端给服务器端发送数据；响应: 服务器给客户端回传数据
     
     
-    
+##  Request
+
 ### Get 请求
 
 ![httpGet](imagePool/httpGet.png)
@@ -28,6 +29,16 @@
             Keep-Alive (告诉服务器，回传数据后不要马上关闭，保持一小段时间的连接）
             Closed (马上关闭)
 
+### Get 请求有哪些
+
+    1) form 标签 method=get
+    2) a 标签
+    3) 在浏览器地址栏中输入地址后敲回车
+    4) link 标签引入 js 文件  ？？？
+    5) script 标签引入 js 文件 ？？？
+    6) img 标签引入图片 ？？？
+    7) iframe 引入 html 页面 ？？？
+    
 
 ### Post 请求
 
@@ -50,3 +61,10 @@
         
         (空行)
     - 请求体  (发送给服务器的数据)
+
+
+### Post 请求有哪些
+
+    1) form 标签 method=post
+
+
