@@ -61,8 +61,11 @@
 
 ## HttpServletResponse
 
-### response.setContentType("UTF-8") 
-    - 设置浏览器和服务器使用的编码都是UTF-8 
+
+### 设置浏览器和服务器使用的编码都是UTF-8
+    - response.setContentType("UTF-8") 
+    - response.setHeader("Content-Type","text/html;charset=UTF-8")
+     
 
 ### 两个输出流的说明
     - 字节流   getOutputStream() -- 常用于下载(传递二进制数据)
@@ -79,10 +82,10 @@
 
     - Definition: 客户端给服务器发请求，然后服务器告诉客户端说，我给你一些地址，你去新地址访问，这叫作请求重定向 (因为之前的地址已经被废弃)。
     - 浏览器地址栏会发生变化
-    - 两次数据
+    - 两次数据请求
     - 不共享 request 里的数据，因为重定向的 request 已经是第二个 request 了
-    - 不能访问 WEB-INF 目录下的资源， 因为使用的是 url link 相当于 <a>
-    - 可以访问工程外资源，eg: http:twitter.com
+    - 不能访问 WEB-INF 目录下的资源， 因为使用的是 url link，是给浏览器解析的，不是服务器，相当于 <a>
+    - 可以访问工程外资源，因为"/"根路径不包含工程路径，eg: http:twitter.com
 
 
 ### Redirect 的两种写法
