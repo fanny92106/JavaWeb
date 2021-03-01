@@ -1,5 +1,6 @@
 # HttpServlet
 
+## HttpServletRequest
 
 ### 常用 API
 
@@ -55,3 +56,41 @@
         - request.getRequestDispatcher("/")
     
     特殊情况: response.sendRedirect("/"); 重定向把斜杠发送给浏览器解析，得到 http://ip:port/
+
+  
+
+## HttpServletResponse
+
+### response.setContentType("UTF-8") 
+    - 设置浏览器和服务器使用的编码都是UTF-8 
+
+### 两个输出流的说明
+    - 字节流   getOutputStream() -- 常用于下载(传递二进制数据)
+    - 字符流   getWriter() -- 常用于回传字符串 (常用) 
+    
+    两个流只能同时使用一个。
+    使用了字节流，就不能再使用字符流，反之亦然，否则就会报错。
+    
+    
+    
+### 请求重定向
+
+![requestRedirect](imagePool/requestRedirect.png)
+
+    - Definition: 客户端给服务器发请求，然后服务器告诉客户端说，我给你一些地址，你去新地址访问，这叫作请求重定向 (因为之前的地址已经被废弃)。
+    - 浏览器地址栏会发生变化
+    - 两次数据
+    - 不共享 request 里的数据，因为重定向的 request 已经是第二个 request 了
+    - 不能访问 WEB-INF 目录下的资源， 因为使用的是 url link 相当于 <a>
+    - 可以访问工程外资源，eg: http:twitter.com
+
+
+### Redirect 的两种写法
+
+写法一：
+
+![way1OfRedirect](imagePool/way1OfRedirect.png)
+
+写法二: 
+
+![way2OfRedirect](imagePool/way2OfRedirect.png)
