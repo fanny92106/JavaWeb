@@ -24,6 +24,33 @@
                 - $("*") 选择所有元素
                 - $(selector_01, selector_02) 组合选择器, 合并多个选择器选择的结果一并返回, 返回的DOM元素集是按其在页面的顺序排序
                 
+              b. 高级选择器: 查文档
+                
         - $("HTML tag").appendTo("body") 代表向html页面添加HTML元素
         
 
+3. jQuery主要函数
+
+    1. 操作标签内容/文本/value
+    
+            - html(): 获取或设置start标签和end标签内的内容(包括标签或文本)
+    ![jQueryHtml()](imagePool/jQueryHtml().png)
+            
+            - text(): 获取或设置start标签和end标签内的文本
+    ![jQueryText()](imagePool/jQueryText().png)
+            
+            - val(): 获取或设置表单项的value属性值
+    ![jQueryVal()](imagePool/jQueryVal().png)
+    
+    
+    
+    2. 操作标签属性
+
+            - attr(): 获取或设置属性值, 但不推荐使用在checked, readOnly, selected, disabled等, 因为如果不设置会返回undefined
+    ![jQueryAttr()](imagePool/jQueryAttr().png)
+                
+            attr()还可以添加自定义标签属性
+    ![jQueryAttrCustom](imagePool/jQueryAttrCustom.png)
+            
+           - prop(): 获取或设置属性值, 推荐使用, 尤其在需要checked, readOnly, selected, disabled时推荐使用, 但不能设置自定义标签属性
+    ![jQueryProp()](imagePool/jQueryProp().png)
