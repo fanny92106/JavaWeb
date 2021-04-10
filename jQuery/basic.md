@@ -31,7 +31,10 @@
 
 3. jQuery主要函数
 
-    1. 操作标签内容/文本/value
+        0). 标签的定位: 各种标签选择器
+    
+
+        1). 操作标签内容/文本/value
     
             - html(): 获取或设置start标签和end标签内的内容(包括标签或文本)
     ![jQueryHtml()](imagePool/jQueryHtml().png)
@@ -43,8 +46,7 @@
     ![jQueryVal()](imagePool/jQueryVal().png)
     
     
-    
-    2. 操作标签属性
+        2). 操作标签属性
 
             - attr(): 获取或设置属性值, 但不推荐使用在checked, readOnly, selected, disabled等, 因为如果不设置会返回undefined
     ![jQueryAttr()](imagePool/jQueryAttr().png)
@@ -54,3 +56,23 @@
             
            - prop(): 获取或设置属性值, 推荐使用, 尤其在需要checked, readOnly, selected, disabled时推荐使用, 但不能设置自定义标签属性
     ![jQueryProp()](imagePool/jQueryProp().png)
+
+
+        3). 操作标签的增删改
+            
+            增: 
+               - a.append(b)            a的子元素的最后插入b
+               - a.prepend(b)           a的子元素的最前插入b
+               - a.insertAfter(b)       ba
+               - a.insertBefore(b)      ab
+            
+            改:
+               - a.replaceWith(b)       用b替换a
+               - a.replaceAll(b)        用a替换掉所有b
+            
+            删:
+               - a.remove()             删除a标签
+               - a.empty()              清空a标签的内容
+               
+               
+                
