@@ -29,7 +29,7 @@
         - $("HTML tag").appendTo("body") 代表向html页面添加HTML元素
         
 
-3. jQuery主要函数
+3. jQuery定位/操作标签的函数
 
         0). 标签的定位: 各种标签选择器
     
@@ -75,4 +75,39 @@
                - a.empty()              清空a标签的内容
                
                
+4.  jQuery事件
+
+
+        0). 原生js页面加载 vs jQuery页面加载 (faster)
+            
+            加载触发时间:
+                - jQuery的页面加载是在浏览器内核解析完页面的标签并创建好DOM对象之后就会马上执行
+                - 原生js的页面加载, 除了要等浏览器内核解析完页面的标签创建好DOM对象, 还要等标签显示所需要的内容加载完之后才会执行
                 
+            执行的次数:
+            
+                - jQuery的页面加载是把全部注册的function函数按顺序依次执行
+                - 原生js的页面加载是执行最后一个注册的函数
+                
+![jsPageLoadAndjQueryPageLoad](imagePool/jsPageLoadAndjQueryPageLoad.png)
+
+
+        1). 常用的事件处理函数
+        
+            - click()
+![clickEvent](imagePool/clickEvent.png)
+
+            - mouseover(): 略
+            - mouseout(): 略
+            - bind(): 一次可以同时绑定一个或多个事件
+![bindEvent](imagePool/bindEvent.png)
+
+            - one(): 也可以同时绑定一个或多个事件, 但每个事件只响应一次
+![oneEvent](imagePool/oneEvent.png)
+    
+            - live(): 也是用来绑定一个或多个事件, 并且对jQuery动态创建出来的标签也依然有效
+![liveEvent](imagePool/liveEvent.png)
+
+
+        2). 获取事件对象, 将event参数传入到回调函数中, 常用来判断事件类型: event.type
+![eventObject](imagePool/eventObject.png)
