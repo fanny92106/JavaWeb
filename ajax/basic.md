@@ -10,6 +10,31 @@
         
 
 
-1. 原生js发送Ajax
+1. 原生js发送Ajax -- rarely use
 
 ![jsAjax](imagePool/jsAjax.png)
+
+
+
+2. jQuery发送Ajax
+
+        常用:
+        $.ajax方法
+            url         请求地址
+            type        请求类型, GET/POST
+            data        请求数据
+                        格式:
+                            a. name=value&name=value
+                            b. {key: value}
+            success     成功响应的回调函数
+            dataType    响应的数据类型
+            
+            
+        a. 发送普通ajax请求
+![jQueryAjax](imagePool/jQueryAjax.png)
+
+       b. 发送get/post ajax请求, 省略type参数
+![jQueryGetPostAjax](imagePool/jQueryGetPostAjax.png)
+
+       c. 发送getJSON ajax请求, 省略type参数和返回值类型参数
+![jQueryGetJSONAjax](imagePool/jQueryGetJSONAjax.png)
