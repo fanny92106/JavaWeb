@@ -99,6 +99,7 @@
 
             - mouseover(): 略
             - mouseout(): 略
+            - mousemove(): 略
             - bind(): 一次可以同时绑定一个或多个事件
 ![bindEvent](imagePool/bindEvent.png)
 
